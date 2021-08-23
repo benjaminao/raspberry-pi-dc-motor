@@ -1,12 +1,9 @@
 const express = require('express');
 const app = express();
 const http = require('http').Server(app);
-const io = require('socket.io')(http);
+// const io = require('socket.io')(http);
 const gpio = require('rpi-gpio');
 const gpiop = gpio.promise;
-const webroot = __dirname + '/../../build';
-http.listen(8080); //listen to port 8080
-app.use(express.static(webroot));
 
 const motor1A = 17; // Green wire
 const motor1B = 27; // Green wire
@@ -24,3 +21,10 @@ gpio.write(motor1E, true); // Turn them on!
 
 // By default we turn off the motors
 gpio.write(motor1E, false);
+
+process.on('SIGINT', function () {  //on ctrl+c  
+    gpio.destroy(() => {
+      console.log('All pins unexported');
+      process.exit(); //exit completely
+    })
+  });

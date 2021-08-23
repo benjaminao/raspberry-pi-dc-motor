@@ -18,7 +18,7 @@ gpiop.setup(motor1B, gpio.DIR_OUT);
 gpiop.setup(motor1E, gpio.DIR_OUT);
 
 
-pio.write(motor1A, true); // 1 & 0 => Clockwise
+gpio.write(motor1A, true); // 1 & 0 => Clockwise
 gpio.write(motor1B, false);
 gpio.write(motor1E, true); // Turn them on!
 

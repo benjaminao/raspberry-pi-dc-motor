@@ -1,0 +1,27 @@
+{
+  "name": "raspberry-pi-dc-motor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3",
+    "socket.io-client": "^4.1.3",
+    "rpi-gpio": "^2.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminao/raspberry-pi-dc-motor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminao/raspberry-pi-dc-motor/issues"
+  },
+  "homepage": "https://github.com/benjaminao/raspberry-pi-dc-motor#readme"
+}
